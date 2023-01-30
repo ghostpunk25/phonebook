@@ -1,16 +1,12 @@
 export const theme = {
    colors: {
-      text: '#000',
-      backgraund: '#fff',
-      primary: '#a7a3a3',
-      secondary: '#05a',
-      accent: '#e6f6ff',
-      moted: '#cae0dd',
+      text: '#cd4936',
       white: '#fff',
-      green: 'green',
-      red: 'red',
-      blue: 'blue'
-      // random: generateColor(),
+      btn: '#629eae',
+      react: '#61dafb',
+      hover: '#f99d90',
+      black: '#000',
+      random: generateColor(),
    },
    space: [0, 2, 4, 6, 8, 16, 32, 64, 128, 256],
    fonts: {
@@ -21,9 +17,9 @@ export const theme = {
    fontSize: {
       xs: '12px',
       s: '14px',
-      m: '16px',
+      m: '24px',
       l: '32px',
-      xl: '64px',
+      xl: '38px',
    },
    fontWeights: {
       normal: 400,
@@ -45,6 +41,6 @@ export const theme = {
    },
 };
 
-// function generateColor() {
-//    return '#' + Math.floor(Math.random() * 16777215).toString(16)
-// }
+function generateColor() {
+   return '#' + Math.floor(Math.random() * 16777215).toString(16)
+}
