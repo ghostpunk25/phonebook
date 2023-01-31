@@ -36,20 +36,21 @@ const PhonebookInfo = () => {
       [contacts, normalize])
 
    return (
-      <Box px='6' display='flex' flexDirection='column' flex='1 1 auto'>
-         <Box display='flex' flexDirection='column' flex='1 1 auto'>
-            <H1>Книга контактів</H1>
-            <Input onChange={handleFilter} type="text" name="filter" placeholder="Знайти контакт" />
+      <Box px='6' display='flex' flexDirection='column'>
+         <Box display='flex' flexDirection='column'>
+            <Box display='flex' justifyContent='space-between' alignItems='center' mb='5' gridGap='4'>
+               <H1>Книга контактів</H1>
+               <Box position='relative' pl='50px' onClick={handleClickForm} checked={isVisibleForm}>
+                  <Btn type="checkbox" name="checkbox" id="c_1" />
+                  <Label htmlFor="c_1"><Span></Span></Label>
+               </Box>
+            </Box>
+            {contacts?.length !== 0 ? <Input onChange={handleFilter} type="text" name="filter" placeholder="Знайти контакт" /> : <Input onChange={handleFilter} type="text" name="filter" disabled placeholder="Знайти контакт" />}
             {isVisibleForm && <AddContactForm />}
             {contacts && <ContactsList removeContact={handleDeletecontact} items={visibleCintacts} />}
-         </Box>
-         <Box ml='auto' position='relative' onClick={handleClickForm} checked={isVisibleForm}>
-            <Btn type="checkbox" name="checkbox" id="c_1" />
-            <Label htmlFor="c_1"><Span></Span></Label>
          </Box>
       </Box>
    );
 };
-
 
 export default PhonebookInfo;

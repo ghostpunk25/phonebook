@@ -2,8 +2,8 @@ import { NavItem } from "./AuthNav.styled";
 
 
 const navItems = [
-   { href: 'login', text: 'Вхід' },
-   { href: 'registration', text: 'Реєстріція' }
+   { href: '/', text: 'Вхід' },
+   { href: 'registration', text: 'Реєстрація' }
 ];
 
 export const AuthNav = () => {

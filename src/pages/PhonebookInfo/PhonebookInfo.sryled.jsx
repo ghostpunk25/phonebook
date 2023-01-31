@@ -8,7 +8,6 @@ margin-bottom: ${p => p.theme.space[6]}px;
 export const H1 = styled.h1`
 font-size: ${p => p.theme.fontSize.xl};
 font-weight: ${p => p.theme.fontWeights.bold};
-margin-bottom: ${p => p.theme.space[5]}px;
 text-align: center;
 `
 export const Label = styled.label`

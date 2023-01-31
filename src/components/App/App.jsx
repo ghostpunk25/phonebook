@@ -26,9 +26,9 @@ export const App = () => {
     <Box display='flex' justifyContent='center' height='100vh' background='#282c34' >
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index path="login" element={isLoggedIn ? <Navigate to='/home' replace={true} /> : <LoginForm />} />
+          <Route index element={isLoggedIn ? <Navigate to='/home' replace={true} /> : <LoginForm />} />
           <Route path="registration" element={isLoggedIn ? <Navigate to='/home' replace={true} /> : <RegistrationForm />} />
-          <Route path="home" element={isLoggedIn ? <PhonebookInfo /> : <Navigate to='/login' replace={true} />} />
+          <Route path="home" element={isLoggedIn ? <PhonebookInfo /> : <Navigate to='/' replace={true} />} />
 
           <Route path="*" element={<LoginForm />} />
         </Route>
